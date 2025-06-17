@@ -1,11 +1,10 @@
-// src/api/request.ts
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://zylalabs.com",
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || "https://api.example.com",
   headers: {
     "Content-Type": "application/json",
-    Authorization: "Bearer 8722|eDDvUAXrOcRUXpEm0bpY2NcVZYrQ4NUiIBQ9Eohq",
+    Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY || ""}`,
   },
   timeout: 10000,
 });
