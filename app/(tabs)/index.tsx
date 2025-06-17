@@ -1,12 +1,13 @@
 import React from "react";
 
-import Hero from "@/components/Home/Hero";
+import ComparePhones from "@/components/Compare/ComparePhones";
 import { ScrollView, StyleSheet } from "react-native";
 
 export default function HomeScreen() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Hero />
+      {/* <Hero /> */}
+      <ComparePhones />
     </ScrollView>
   );
 }
